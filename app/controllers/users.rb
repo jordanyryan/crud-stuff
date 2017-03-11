@@ -1,8 +1,5 @@
 enable :sessions
 
-get '/users/new' do
-  erb :'/users/new'
-end
 
 get '/users/login' do
   erb :'/users/login'
@@ -18,8 +15,8 @@ get '/users/logout' do
 end
 
 get '/users/:id' do
-  user = User.find(params[:id])
-  @channels = user.channels
+  @user = User.find(params[:id])
+  @channels = @user.channels
   erb :'/users/show'
 end
 

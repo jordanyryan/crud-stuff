@@ -13,3 +13,7 @@ end
 def subscribe
   !subscribed.empty?
 end
+
+def user_tpm
+  @channels.inject(0) {|total, channel| total + channel.price_per_month.to_f}.round(2)
+end

@@ -1,0 +1,15 @@
+<h2>Welcome, <%="#{@user.first_name} #{@user.last_name}"%></h2>
+<br>
+<h3>Your subscribed channels are: </h3>
+<ul>
+<% @channels.each do |channel| %>
+<br>
+<li><a href="../channels/<%= channel.id %>"><%=channel.name %></a></li>
+<% end %>
+<br>
+</ul>
+Price Per Month: <%= user_tpm %>
+
+
+
+
