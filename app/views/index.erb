@@ -1,0 +1,7 @@
+<div class="container">
+  <ul>
+  <% @channels.each do |channel| %>
+    <li><a href="channels/<%=channel.id%>"><%= channel.name %></a></li>
+  <% end %>
+  </ul>
+</div>
