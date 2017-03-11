@@ -1,0 +1,10 @@
+<%= erb :'/partials/_errors' %>
+
+<form action="/users/login" method="post">
+  <input type="text" name="user[email]" placeholder="email@email.com">
+  <br>
+  <input type="password" name="user[password]" placeholder="password">
+  <br>
+  <input type="submit" value="Login">
+  <br>
+</form>

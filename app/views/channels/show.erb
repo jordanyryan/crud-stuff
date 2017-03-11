@@ -1,0 +1,23 @@
+
+<h2>Channel Name: <%= @channel.name %></h2>
+<br>
+Callsign: <%= @channel.callsign %>
+<br>
+Price Per Month: <%= @channel.price_per_month %>
+<br>
+Current Subscribers: <%= @channel.subscribers.count %>
+<br>
+<% if logged_in && !subscribe %>
+  <form action="/channels/<%=@channel.id%>/subscribe" method="post">
+    <input type="submit" value="Subscribe">
+  </form>
+<% end %>
+
+<% if logged_in && subscribe %>
+  <form action="/channels/<%=@channel.id%>/unsubscribe" method="post">
+    <input type="submit" value="Unsubscribe">
+  </form>
+<% end %>
+
+
+
